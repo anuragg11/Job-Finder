@@ -11,7 +11,7 @@ const JobDetails = () => {
   const {id} = useParams();
   const [job,setJob] = useState([]);
   useEffect(()=>{
-   fetch(`http://localhost:5000/all-jobs/${id}`)
+   fetch(`https://job-finder-backend-etod.onrender.com/all-jobs/${id}`)
    .then(res => res.json())
    .then(data => setJob(data))
   },[]);
