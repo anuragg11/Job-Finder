@@ -1,0 +1,48 @@
+[
+   
+    {
+        "id": 1,
+        "name": "Amit Sharma",
+        "profilepic": "/images/profile1.jpg",
+        "title": "Excellent Platform for Job Seekers",
+        "place": "Delhi",
+        "date":"2 September 2024",
+        "description": "I found this job portal to be exceptionally user-friendly and efficient. The interface is intuitive, making it easy to navigate through job listings and filter them according to my preferences. The application process is straightforward, and I appreciate the timely notifications about job openings. This platform has significantly streamlined my job search, and I’m now employed in a role that matches my skills perfectly. Highly recommend it to anyone who is serious about finding their next job opportunity."
+    },
+    {
+        "id": 2,
+        "name": "Priya Patel",
+        "profilepic": "/images/profile2.png",
+        "title": "Great Experience with Job Search",
+        "place": "Mumbai",
+        "date":"28 August 2024",
+        "description": "Using this job portal has been a great experience. The site offers a wide range of job listings across various industries, and the search filters are very detailed, allowing me to find jobs that closely match my qualifications and interests. I was impressed by the quick response from customer service when I had questions about my application. Overall, the portal made my job search much more efficient and less stressful, and I’m grateful for the support it provided throughout the process."
+    },
+    { 
+        "id": 3,
+        "name": "Rajesh Kumar",
+        "profilepic": "/images/profile3.jpg",
+        "title": "Effective for Career Advancement",
+        "place": "Bangalore",
+        "date":"12 August 2024",
+        "description": "This job portal has been instrumental in advancing my career. I was able to connect with multiple recruiters and explore several exciting job opportunities that I wouldn’t have found elsewhere. The platform’s career resources, such as resume tips and interview preparation guides, were incredibly helpful and gave me the edge I needed. After using this portal, I landed a fantastic job that aligns well with my career goals. I highly recommend this platform to anyone looking to take their career to the next level."
+    },
+    {
+        "id": 4,
+        "name": "Sneha Reddy",
+        "profilepic": "/images/profile4.jpg",
+        "title": "User-Friendly and Reliable",
+        "place": "Hyderabad",
+        "date":"20 September 2024",
+        "description": "The job portal's user interface is very well-designed, making it easy to navigate and search for jobs. I appreciated the personalized job recommendations based on my profile, which helped me discover opportunities that were a good fit. The application process was simple and efficient, and I was pleased with the quality of the job listings. Additionally, the resume-building tools available on the site were a valuable resource. Overall, my experience with this portal has been very positive, and it has made my job search much more manageable."
+    },
+    {
+        "id": 5,
+        "name": "Vikram Singh",
+        "profilepic": "/images/profile5.jpg",
+        "title": "A Useful Tool for Job Seekers",
+        "place": "Chennai",
+        "date":"20 August 2024",
+        "description": "I found this job portal to be a highly useful tool for my job search. The variety of job listings is impressive, and the advanced search functionality allowed me to filter through positions that matched my specific criteria. The portal also provides excellent resources for building a professional resume and preparing for interviews. These features, combined with the portal’s user-friendly design, made my job search process more efficient and less daunting. I’m now in a new role that I’m excited about, thanks to the opportunities I found on this site."
+    }
+]
