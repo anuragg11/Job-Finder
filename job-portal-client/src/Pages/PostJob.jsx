@@ -16,7 +16,7 @@ const PostJob = () => {
   const onSubmit = (data) => {
     data.skills = selectedOption;  
     //console.log(data)
-    fetch("http://localhost:5000/post-job" ,
+    fetch("https://job-finder-backend-etod.onrender.com/post-job" ,
       {method:"POST",
       headers:{"content-Type": "application/json"},
       body: JSON.stringify(data)})
