@@ -19,7 +19,7 @@ const Home = () => {
 
   useEffect(()=>{
       setIsLoading(true);
-      fetch('http://localhost:5000/all-jobs').then(res => res.json().then(data => {
+      fetch('https://job-finder-backend-etod.onrender.com/all-jobs').then(res => res.json().then(data => {
       // fetch('jobs.json').then(res => res.json().then(data => {
        // console.log(data);
        setJobs(data);
