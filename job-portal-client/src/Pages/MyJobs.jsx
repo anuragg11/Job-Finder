@@ -60,7 +60,7 @@ const MyJobs = () => {
             setIsLoading(true);
             const userEmail = await fetchUserData();
             if (userEmail) {
-                const response = await fetch(`http://localhost:5000/myJobs/${userEmail}`);
+                const response = await fetch(`https://job-finder-backend-etod.onrender.com/myJobs/${userEmail}`);
                 if (response.ok) {
                     const data = await response.json();
                     setJobs(data);
@@ -123,7 +123,7 @@ useEffect(() => {
           setIsLoading(true);
           const userEmail = await fetchUserData();
           if (userEmail) {
-              const response = await fetch(`http://localhost:5000/myJobs/${userEmail}`);
+              const response = await fetch(`https://job-finder-backend-etod.onrender.com/myJobs/${userEmail}`);
               if (response.ok) {
                   const data = await response.json();
                   setJobs(data);
@@ -142,7 +142,7 @@ useEffect(() => {
 
     const handleDelete = (id) => {
       //console.log(id);
-        fetch(`http://localhost:5000/job/${id}` ,{
+        fetch(`https://job-finder-backend-etod.onrender.com/job/${id}` ,{
           method:"DELETE"
         })
         .then(res => res.json())
