@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "edit-job/:id",
         element: <ProtectedRoute element={<UpdateJob />} />,
-        loader: ({ params }) => fetch(https://job-finder-backend-etod.onrender.com/all-jobs/${params.id}`),
+        loader: ({ params }) => fetch(`https://job-finder-backend-etod.onrender.com/all-jobs/${params.id}`),
       },
       {
         path: "/job/:id",
