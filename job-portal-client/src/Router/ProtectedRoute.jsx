@@ -4,6 +4,9 @@ import { Navigate } from 'react-router-dom';
 import { auth } from '../Firebase/firebase.config'; // Make sure this path is correct
 
 const ProtectedRoute = ({ element }) => {
+  
+  // Disable authentication state completely
+  /*
   const [isAuthenticated, setIsAuthenticated] = useState(null); // Use null to indicate loading
 
   useEffect(() => {
@@ -15,14 +18,23 @@ const ProtectedRoute = ({ element }) => {
     // Clean up the subscription on component unmount
     return () => unsubscribe();
   }, []);
+  */
 
+  //  Remove loading check
+  /*
   if (isAuthenticated === null) {
     // Show loading indicator while checking authentication
     return <div>Loading...</div>;
   }
+  */
 
-  // Render the element if authenticated, otherwise redirect to login
+  // ALWAYS allow access (bypass login completely)
+  return element;
+
+  // Original logic (disabled)
+  /*
   return isAuthenticated ? element : <Navigate to="/login" state={{ message: "Please log in to access this page." }}/>;
+  */
 };
 
 export default ProtectedRoute;
