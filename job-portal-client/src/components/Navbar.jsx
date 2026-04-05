@@ -13,12 +13,11 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-   
-    const [isLoggedIn , setIsLoggedIn] = useState(false);
+    // const [isLoggedIn , setIsLoggedIn] = useState(true);  
+
+    /*
     const fetchUserData = async () => {
-      
         auth.onAuthStateChanged(async (user) => {
-        //  console.log(user);
           if(user){
              setIsLoggedIn(true);
           }
@@ -26,26 +25,26 @@ const Navbar = () => {
             setIsLoggedIn(false);
           }
         });
-      };
-  
-      useEffect(()=>{
-        fetchUserData()
-      },[]);
-    
+    };
 
+    useEffect(()=>{
+        fetchUserData()
+    },[]);
+    */
+
+    /*
     async function handleLogout() {
         try {
           await auth.signOut();
-          console.log("User logged out successfully!");
           Swal.fire("Logging Out");
-          navigate("/login"); // Redirect to login
+          navigate("/login");
         } 
-        
         catch (error) {
           console.error("Error logging out:", error.message);
           Swal.fire("Error Logging out");
         }
-      }
+    }
+    */
 
     const navItems = [
         { path: "/", title: "Home" },
@@ -53,13 +52,15 @@ const Navbar = () => {
         { path: "salary", title: "Salary Estimate" },
         { path: "/post-job", title: "Post Job" },
     ]
+
     return (
         <header className="max-w-screen-2xl container mx-auto xl:px-24 px-6">
           
             <nav className="flex justify-between items-center py-6">
-                <a href="/" className="flex items-center gap-2 text-2xl text-black font-semibold text-blue"> <img src="../../images/logo.png" width="30px" height="30px" /> CareerHub World</a>
+                <a href="/" className="flex items-center gap-2 text-2xl text-black font-semibold text-blue"> 
+                    <img src="../../images/logo.png" width="30px" height="30px" /> CareerHub World
+                </a>
 
-                {/* nav items for large device */}
                 <ul className="hidden md:flex gap-12">
                     {
                         navItems.map(({ path, title }) => (
@@ -73,32 +74,23 @@ const Navbar = () => {
                     }
                 </ul>
 
-                {/* Signup and login Button */}
                 <div className="text-base text-primary font-medium space-x-5 hidden lg:block">
 
-                 
-                 {isLoggedIn ? 
-                 <button className="py-2 px-5 border rounded bg-blue text-white" onClick={handleLogout}>Logout</button>
-                 : 
-                 <>
-                <Link to="/login" className="py-2 px-5 border rounded">Login</Link>
-                <Link to="/sign-up" className="py-2 px-5 border rounded bg-blue text-white">SignUp</Link>
-                </> 
-                }
-                   </div>
+            
+                 <Link to="/login" className="py-2 px-5 border rounded">Login</Link>
+                 <Link to="/sign-up" className="py-2 px-5 border rounded bg-blue text-white">SignUp</Link>
 
-                {/* mobile type menu */}
+                </div>
+
                 <div className="md:hidden block">
                     <button onClick={handleMenuToggle}>
                         {
                             isMenuOpen ? <FaXmark className="w-5 h-5 text-primary"/>:<FaBars className="w-5 h-5 text-primary"/>
                         }
-                    
                     </button>
                 </div>
             </nav>
 
-            {/* nav items for mobile */}
             <div className={`px-4 bg-gray-200 py-5 rounded-lg ${isMenuOpen ? "":"hidden"}`}>
             <ul>
                     {
@@ -112,14 +104,10 @@ const Navbar = () => {
                         ))
                     }
                     <div className="mt-2">
-                      {isLoggedIn ? 
-                 <button className="py-2 px-5 border rounded bg-blue text-white" onClick={handleLogout}>Logout</button>
-                 : 
-                 <>
+
                 <Link to="/login" className="py-2 px-5 border rounded mr-4 text-white bg-blue">Login</Link>
                 <Link to="/sign-up" className="py-2 px-5 border rounded bg-blue text-white">SignUp</Link>
-                </> 
-                }
+
                 </div>
                 </ul>
             </div>
